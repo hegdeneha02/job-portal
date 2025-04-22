@@ -1,0 +1,29 @@
+<!-- dashboard.component.html -->
+<nav class="navbar">
+    <div class="logo">
+      <a routerLink="#">JobFinder</a>
+    </div>
+    <ul class="nav-links">
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/register">Register</a></li>
+     
+    </ul>
+    <div class="hamburger" (click)="toggleMenu()">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+    </div>
+  </nav>
+  
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>Welcome to Your Job Dashboard</h1>
+      <p>Find your dream job today!</p>
+    </header>
+  
+    <!-- Content specific to dashboard can go here -->
+  
+   
+  </div>
+  <app-footer></app-footer>
+  

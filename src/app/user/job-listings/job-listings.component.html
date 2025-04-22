@@ -1,0 +1,36 @@
+<app-navbar/>
+<div class="job-listings">
+  <h2>Job Listings</h2>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <div class="actions">
+    <a routerLink="/my-applications">
+      <button class="primary-btn">My Applications</button>
+    </a>
+  </div>
+
+  <div *ngIf="jobs.length > 0; else noJobs">
+    <div class="job" *ngFor="let job of jobs">
+      <h3>{{ job.position }}</h3>
+      <p><strong>CTC:</strong> {{ job.ctc }}</p>
+      <p><strong>Available Openings:</strong> {{ job.openings }}</p>
+      <p><strong>Department:</strong> {{ job.department }}</p>
+      <p><strong>Technologies:</strong> {{ job.technologies.join(', ') }}</p>
+      <p><strong>Location:</strong> {{ job.location }}</p>
+      
+      <a [routerLink]="['/apply', job._id]">
+        <button class="apply-btn">Apply</button>
+      </a>
+    </div>
+  </div>
+
+  <ng-template #noJobs>
+    <p>No jobs available at the moment.</p>
+  </ng-template>
+</div>
+
+
+<app-footer/>

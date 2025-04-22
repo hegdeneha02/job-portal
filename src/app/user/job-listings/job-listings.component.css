@@ -1,0 +1,118 @@
+.job-listings {
+  padding: 15px; /* Reduced padding */
+  max-width: 700px; /* Smaller max width */
+  margin: 20px auto; /* Reduced margins */
+  background-color: #f9f9f9; /* Lighter background */
+  border-radius: 8px; /* Smaller border-radius */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.job-listings h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px; /* Reduced margin */
+  font-size: 1.8em; /* Good, prominent size */
+  font-weight: 600; /* Strong heading weight */
+  letter-spacing: -0.5px; /* Slightly tighter letter spacing for a cleaner look */
+}
+
+.job {
+  border: 1px solid #e0e0e0;
+  padding: 15px; /* Reduced padding */
+  margin-bottom: 12px; /* Reduced margin */
+  border-radius: 6px; /* Smaller border-radius */
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.job:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.job h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px; /* Reduced margin */
+  font-size: 1.3em; /* Good size for job title */
+  font-weight: 500;
+  flex-basis: 100%;
+}
+
+.job p {
+  margin-bottom: 6px; /* Reduced margin */
+  color: #555;
+  flex-basis: calc(50% - 8px);
+  font-size: 1em;
+}
+
+.job strong {
+  font-weight: bold;
+  color: #333;
+}
+
+button.primary-btn,
+button.apply-btn {
+  background-color: #ffc107; /* Original yellow */
+  color: #333; /* Original dark text */
+  border: none;
+  padding: 8px 16px; /* Reduced padding */
+  border-radius: 6px; /* Smaller border-radius */
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1em;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+button.apply-btn {
+  background-color: #5cb85c; /* Vibrant green */
+  color: white;
+}
+
+button.primary-btn:hover {
+  background-color: #e0a800;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+button.apply-btn:hover {
+  background-color: #4cae4c;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+.actions {
+  text-align: right;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.actions a button.primary-btn {
+  font-size: 0.95em; /* Slightly smaller action button */
+}
+
+.job a {
+  text-decoration: none;
+}
+
+.error-message {
+  color: #d9534f;
+  background-color: #fdecea;
+  border: 1px solid #e74c3c;
+  padding: 10px; /* Reduced padding */
+  border-radius: 4px; /* Smaller border-radius */
+  margin-bottom: 15px; /* Reduced margin */
+  text-align: center;
+  font-size: 0.95em; /* Smaller font */
+}
+
+.no-jobs {
+  text-align: center;
+  color: #777;
+  font-size: 1em; /* Smaller font */
+  padding: 15px; /* Reduced padding */
+  background-color: #f9f9f9;
+  border-radius: 6px; /* Smaller border-radius */
+}

@@ -1,0 +1,55 @@
+<form [formGroup]="applyForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+
+    <div>
+      <label>Full Name:</label>
+      <input formControlName="fullName" type="text" />
+    </div>
+  
+    <div>
+      <label>Email:</label>
+      <input formControlName="email" type="email" />
+    </div>
+  
+    <div>
+      <label>Phone:</label>
+      <input formControlName="phone" type="text" />
+    </div>
+  
+    <div>
+      <label>Address:</label>
+      <input formControlName="address" type="text" />
+    </div>
+  
+    <div>
+      <label>Date of Birth:</label>
+      <input formControlName="dateOfBirth" type="date" />
+    </div>
+  
+    <div>
+      <label>Gender:</label>
+      <select formControlName="gender">
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  
+    <div>
+      <label>Education:</label>
+      <input formControlName="education" type="text" />
+    </div>
+  
+    <div>
+      <label>Experience:</label>
+      <textarea formControlName="experience"></textarea>
+    </div>
+    <div>
+      <label for="resume">Resume (PDF only):</label>
+      <input type="file" id="resume" (change)="onFileChange($event)" accept="application/pdf" required />
+      <div *ngIf="submitted && !resumeFile" class="error">Resume is required and must be a PDF.</div>
+    </div>
+  
+    <button type="submit" [disabled]="applyForm.invalid || !resumeFile">Submit</button>
+  </form>
+  

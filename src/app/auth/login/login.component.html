@@ -1,0 +1,36 @@
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="submit()">
+      <div class="input-group">
+        <input
+          name="email"
+          type="text"
+          placeholder="email"
+          required
+          [(ngModel)]="email"
+        />
+      </div>
+  
+      <div class="input-group">
+        <input
+          name="password"
+          type="password"
+          placeholder="password"
+          required
+          [(ngModel)]="password"
+        />
+      </div>
+  
+      <button type="submit">Login</button>
+  
+      <div *ngIf="error" class="error">{{ error }}</div>
+  
+      <p class="signup-link">
+        Doesn't have an account?
+        <a routerLink="/register">SignUp Now</a>
+      </p>
+    </form>
+  </div>
+  
+  

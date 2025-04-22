@@ -1,0 +1,38 @@
+<div *ngIf="loading" class="loading">
+    Loading applications...
+  </div>
+  
+  <table *ngIf="!loading && applications.length > 0" class="applications-table">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Experience</th>
+        <th>Job Position</th>
+        <th>Resume</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let app of applications">
+        <td>{{ app.personalDetails.fullName }}</td>
+        <td>{{ app.personalDetails.email }}</td>
+        <td>{{ app.personalDetails.phone }}</td>
+        <td>{{ app.personalDetails.experience }}</td>
+        <td>{{ app.jobId.position }}</td>
+        <td>
+          <button class="view-btn" (click)="viewResume(app._id)">View</button>
+        </td>
+        <td>
+            <button class="approve-btn" (click)="updateStatus(app._id, 'Approved')">Approve</button>
+            <button class="reject-btn" (click)="updateStatus(app._id, 'Rejected')">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div *ngIf="!loading && applications.length === 0" class="no-data">
+    No applications found.
+  </div>
+  

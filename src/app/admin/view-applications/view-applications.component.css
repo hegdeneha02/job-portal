@@ -1,0 +1,100 @@
+.loading,
+.no-data {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  font-size: 1.1em; /* Slightly larger font */
+  padding: 15px; /* Add padding for better visual appearance */
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.applications-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff; /* White table background */
+  border-radius: 8px; /* Rounded corners for the table */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* To contain the border-radius */
+}
+
+.applications-table th,
+.applications-table td {
+  border-bottom: 1px solid #e0e0e0; /* Lighter border */
+  padding: 12px 15px; /* Slightly increased padding */
+  text-align: center; /* Keep text centered */
+  font-size: 1em;
+}
+
+.applications-table th {
+  background-color: #ffc107; /* Yellow header */
+  color: #333; /* Dark text */
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase for headers */
+  letter-spacing: 0.5px; /* Add letter spacing */
+}
+
+.applications-table td {
+  color: #555; /* Darker gray text */
+}
+
+.applications-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+.applications-table tr:hover {
+  background-color: #f0f0f0; /* Slightly darker hover */
+}
+
+.view-btn,
+.approve-btn,
+.reject-btn {
+  padding: 10px 16px; /* Increased button padding */
+  border: none;
+  border-radius: 6px; /* More rounded buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added shadow transition */
+  font-size: 1em;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.view-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.approve-btn,
+.reject-btn {
+  display: block;
+  width: 100px; /* Increased width */
+  text-align: center;
+  margin: 5px auto; /* Center buttons and add vertical space */
+}
+
+.approve-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.reject-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #2980b9;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
+}
+
+.approve-btn:hover {
+  background-color: #27ae60;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+.reject-btn:hover {
+  background-color: #c0392b;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}

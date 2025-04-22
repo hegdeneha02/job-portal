@@ -1,0 +1,45 @@
+<app-navbar/>
+<p></p>
+<div class="page-container">
+  <div class="create-job-container">
+    <h2>Create Job</h2>
+
+    <form [formGroup]="createJobForm" (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <label for="position">Position</label>
+        <input type="text" id="position" formControlName="position" placeholder="Enter Position" />
+      </div>
+      <div class="input-group">
+        <label for="ctc">CTC</label>
+        <input type="number" id="ctc" formControlName="ctc" placeholder="Enter CTC" />
+      </div>
+      <div class="input-group">
+        <label for="openings">Openings</label>
+        <input type="number" id="openings" formControlName="openings" placeholder="Openings" />
+      </div>
+      <div class="input-group">
+        <label for="department">Department</label>
+        <input type="text" id="department" formControlName="department" placeholder="Department" />
+      </div>
+      <div class="input-group">
+        <label for="technologies">Technologies</label>
+        <input type="text" id="technologies" formControlName="technologies" placeholder="Technologies" />
+      </div>
+      <div class="input-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" formControlName="location" placeholder="Location" />
+      </div>
+
+      <div class="button-group">
+        <button type="submit" [disabled]="createJobForm.invalid" class="submit-button">Create Job</button>
+        <a href="admin/view-applications" class="template-button">View Applications</a>
+      </div>
+
+    </form>
+
+    <div *ngIf="errorMessage" class="error">
+      {{ errorMessage }}
+    </div>
+  </div>
+</div>
+<app-footer/>

@@ -1,0 +1,75 @@
+.applications-container {
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #f9f9f9; /* Lighter background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.applications-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.error-message {
+  color: #d9534f;
+  background-color: #fdecea;
+  border: 1px solid #e74c3c;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.no-applications {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.applications-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff; /* White background for the table */
+  border-radius: 8px;
+  overflow: hidden; /* To contain the border-radius for header/body */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.applications-table th,
+.applications-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.applications-table th {
+  background-color: #ffc107; /* Yellow header */
+  color: #333; /* Dark header text */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.applications-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+.applications-table tbody tr:hover {
+  background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+.applications-table td {
+  color: #555;
+}
